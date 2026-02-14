@@ -6,7 +6,8 @@ body {
 /* Make anchor scrolling stop a bit lower so titles are visible */
 section {
   scroll-margin-top: 90px; /* slightly more than navbar height */
-}/* Smooth scrolling */
+}
+/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
@@ -50,3 +51,4 @@ footer {
 }
 
 }
+
