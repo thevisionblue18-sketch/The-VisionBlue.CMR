@@ -1,25 +1,17 @@
-/* Prevent content from hiding behind the fixed navbar */
-body {
-  padding-top: 80px; /* adjust if your navbar is taller/shorter */
-}
-
-/* Make anchor scrolling stop a bit lower so titles are visible */
-section {
-  scroll-margin-top: 90px; /* slightly more than navbar height */
-}
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Body spacing for fixed navbar */
+/* Prevent content from hiding behind the fixed navbar */
 body {
-  padding-top: 70px;
+  padding-top: 80px; /* adjust if your navbar is taller/shorter */
   font-family: Arial, sans-serif;
 }
 
-/* Section spacing */
+/* Make anchor scrolling stop a bit lower so titles are visible */
 section {
+  scroll-margin-top: 90px; /* slightly more than navbar height */
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -49,7 +41,3 @@ h1, h2, h3, h4, h5 {
 footer {
   font-size: 0.9rem;
 }
-
-}
-
-
