@@ -1,279 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>The VisionBlue – Through Plight into Light</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The VisionBlue NGO</title>
 
-<style>
-/* ---------- COLOR VARIABLES ---------- */
-:root {
-    --bg-color: #f7f9fc;
-    --text-color: #222;
-    --primary: #0b4fa3;
-    --primary-dark: #083b78;
-    --card-bg: #ffffff;
-}
-body.dark {
-    --bg-color: #111827;
-    --text-color: #e5e7eb;
-    --primary: #2563eb;
-    --primary-dark: #1d4ed8;
-    --card-bg: #1f2937;
-}
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-/* ---------- GLOBAL ---------- */
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: var(--bg-color);
-    color: var(--text-color);
-}
-h2 {
-    color: var(--primary);
-}
-section {
-    padding: 40px 20px;
-    max-width: 1000px;
-    margin: auto;
-}
-.card {
-    background: var(--card-bg);
-    padding: 25px;
-    margin: 15px 0;
-    border-radius: 6px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
-}
-
-/* ---------- HEADER ---------- */
-header {
-    background: var(--primary);
-    color: white;
-    padding: 15px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.header-left {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-header img {
-    height: 60px;
-}
-.dark-toggle {
-    background: white;
-    color: var(--primary-dark);
-    border: none;
-    padding: 6px 10px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-/* ---------- NAVIGATION ---------- */
-nav {
-    background: var(--primary-dark);
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-}
-.nav-links {
-    display: flex;
-    gap: 15px;
-}
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-.menu-toggle {
-    display: none;
-    font-size: 1.4rem;
-    color: white;
-    background: none;
-    border: none;
-}
-
-/* MOBILE NAV */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background: var(--primary-dark);
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 60px;
-        padding: 20px;
-    }
-    .nav-links.show {
-        display: flex;
-    }
-    .menu-toggle {
-        display: block;
-    }
-}
-
-/* ---------- HERO ---------- */
-.hero {
-    background: linear-gradient(rgba(11,79,163,0.85), rgba(11,79,163,0.85)), url('hero.jpg');
-    background-size: cover;
-    color: white;
-    padding: 80px 20px;
-    text-align: center;
-}
-.button {
-    background: var(--primary);
-    color: white;
-    padding: 12px 25px;
-    display: inline-block;
-    margin: 10px;
-    text-decoration: none;
-    border-radius: 4px;
-}
-
-/* ---------- GRID SECTIONS ---------- */
-.mission-vision {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
-}
-
-/* ---------- FOOTER ---------- */
-footer {
-    background: var(--primary-dark);
-    color: white;
-    text-align: center;
-    padding: 30px;
-}
-</style>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
-<header>
-    <div class="header-left">
-        <img src="assets/img/logo-placeholder.png" class="img-fluid" style="max-width: 280px;" alt="VisionBlue Logo">
-        <div>
-            <h1>The VisionBlue</h1>
-            <p><em>Through Plight into Light</em></p>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#home">The VisionBlue NGO</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#programs">Programs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="py-5 bg-light">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h1 class="display-5 fw-bold">Empowering Communities, Shaping Futures</h1>
+          <p class="lead">
+            The VisionBlue NGO supports young people, women, and vulnerable communities through education,
+            skills training, and sustainable development initiatives.
+          </p>
+          <a href="#about" class="btn btn-primary me-2">Learn More</a>
+          <a href="#contact" class="btn btn-outline-primary">Contact Us</a>
+        </div>
+        <div class="col-md-6 text-center">
+          <img src="assets/img/workshop.jpg" class="img-fluid rounded shadow" alt="Workshop">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h2>About The VisionBlue NGO</h2>
+          <p>
+            The VisionBlue NGO is dedicated to empowering communities through education, vocational training,
+            and human-centered development. We work closely with local partners to create opportunities for
+            young people, women, and vulnerable groups.
+          </p>
+          <p>
+            Our mission is to foster dignity, responsibility, and sustainable progress by equipping individuals
+            with practical skills and the confidence to shape their own futures.
+          </p>
+        </div>
+        <div class="col-md-6 text-center">
+          <img src="assets/img/logo-placeholder.png" class="img-fluid" style="max-width: 280px;" alt="VisionBlue Logo">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMS SECTION -->
+  <section id="programs" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Our Programs</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Vocational Skills Training</h5>
+              <p class="card-text">Tailoring, crafts, and practical skills that open real economic opportunities.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Education & Mentoring</h5>
+              <p class="card-text">Support for students through mentoring, workshops, and community learning.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Community Development</h5>
+              <p class="card-text">Local projects that strengthen social ties and build sustainable communities.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Gallery</h2>
+        <p class="text-center mb-5">
+            Moments from our tailoring workshop and the first beneficiaries of The VisionBlue NGO.
+        </p>
+
+        <div class="row g-4">
+            <div class="col-md-3 col-sm-6">
+                <img src="assets/img/workshop-1.jpg" class="img-fluid rounded shadow-sm" alt="Tailoring workshop session 1">
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <img src="assets/img/workshop-2.jpg" class="img-fluid rounded shadow-sm" alt="Tailoring workshop session 2">
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <img src="assets/img/beneficiaries-1.jpg" class="img-fluid rounded shadow-sm" alt="First beneficiaries of the program">
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <img src="assets/img/beneficiaries-2.jpg" class="img-fluid rounded shadow-sm" alt="Beneficiaries showcasing their work">
+            </div>
         </div>
     </div>
-    <button class="dark-toggle" id="darkToggle">Dark mode</button>
-</header>
-
-<nav>
-    <button class="menu-toggle" id="menuToggle">☰</button>
-    <div class="nav-links" id="navLinks">
-        <a href="index.html#home">Home</a>
-        <a href="index.html#about">About</a>
-        <a href="index.html#programs">Programs</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="team.html">Team</a>
-        <a href="donate.html">Donate</a>
-        <a href="index.html#impact">Impact</a>
-        <a href="index.html#contact">Contact</a>
-    </div>
-</nav>
-
-<div class="hero" id="home">
-    <h1>Empowering Young Women and Girls in Cameroon</h1>
-    <p>From vulnerability to independence through skills, mentoring, and opportunity.</p>
-    <a class="button" href="donate.html">Support a Girl</a>
-    <a class="button" href="team.html">Partner With Us</a>
-</div>
-
-<section>
-    <h2>Who We Are</h2>
-    <p>
-        The VisionBlue is a non-profit organization founded in 2018 to empower young women and girls in Cameroon,
-        especially those between 15 and 25 who face poverty, displacement, and social exclusion.
-    </p>
 </section>
 
-<section id="about">
-    <h2>Mission & Vision</h2>
-    <div class="mission-vision">
-        <div class="card">
-            <h3>Our Mission</h3>
-            <p>
-                To accompany young women and girls from vulnerability into dignity through skills, mentoring,
-                psychosocial support, and opportunities for independence.
-            </p>
-        </div>
-        <div class="card">
-            <h3>Our Vision</h3>
-            <p>
-                A Cameroon where every young woman can build a life of freedom, responsibility, and solidarity—
-                becoming a source of light for others.
-            </p>
-        </div>
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact Us</h2>
+      <p class="text-center">For partnerships or information, reach out:</p>
+      <ul class="list-unstyled text-center">
+        <li><strong>Email:</strong> info@thevisionblue.org</li>
+        <li><strong>Location:</strong> Cameroon & Rome, Italy</li>
+      </ul>
     </div>
-</section>
+  </section>
 
-<section id="programs">
-    <h2>Our Programs</h2>
+  <!-- FOOTER -->
+  <footer class="py-3 bg-dark text-white text-center">
+    <small>&copy; <span id="year"></span> The VisionBlue NGO. All rights reserved.</small>
+  </footer>
 
-    <div class="card">
-        <h3>Skills & Training</h3>
-        <p>Training in IT, tailoring, beauty, catering, agriculture, and small trade.</p>
-    </div>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 
-    <div class="card">
-        <h3>Business Grants</h3>
-        <p>Partially refundable micro-grants that help young women start small businesses.</p>
-    </div>
-
-    <div class="card">
-        <h3>Mentoring & Follow-up</h3>
-        <p>Each beneficiary is paired with a mentor for guidance and accountability.</p>
-    </div>
-
-    <div class="card">
-        <h3>Health & Hygiene</h3>
-        <p>Health talks, menstrual hygiene workshops, and psychological support.</p>
-    </div>
-</section>
-
-<section id="impact">
-    <h2>Our Impact Model</h2>
-    <p>
-        Our “Aid to Aid” model ensures sustainability: beneficiaries help others through refunds,
-        mentoring, and knowledge sharing.
-    </p>
-</section>
-
-<section id="contact">
-    <h2>Contact Us</h2>
-    <div class="card">
-        <p><strong>Email:</strong> thevisionblue@gmail.com</p>
-        <p><strong>Website:</strong> thevisionblue.org</p>
-        <p><strong>Italy:</strong> +39 392 845 6152</p>
-        <p><strong>Germany:</strong> +49 1521 4617930</p>
-        <p><strong>Cameroon:</strong> Bamenda & Yaoundé</p>
-    </div>
-</section>
-
-<footer>
-    <p>© 2026 The VisionBlue – Through Plight into Light</p>
-</footer>
-
-<script>
-const menuToggle = document.getElementById('menuToggle');
-const navLinks = document.getElementById('navLinks');
-const darkToggle = document.getElementById('darkToggle');
-
-menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-});
-
-darkToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-    darkToggle.textContent = document.body.classList.contains('dark') ? 'Light mode' : 'Dark mode';
-});
-</script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
